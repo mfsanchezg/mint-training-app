@@ -19,6 +19,6 @@ public class InstructorController {
     @GetMapping("/{id}/overallduration")
     public ResponseEntity<String> readByInstructorId(@PathVariable("id") Integer id) throws Exception{
         Long durationDays = service.getOverallDuration(id);
-        return new ResponseEntity<>("The duration (days) for all the events with instructorId {" + id + "} are = " + durationDays, HttpStatus.OK);
+        return new ResponseEntity<>("The duration in (days) for all the events with instructorId {" + id + "} are = " + durationDays, HttpStatus.OK);
     }
 }
